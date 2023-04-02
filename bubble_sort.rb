@@ -3,11 +3,15 @@
 def bubble_sort(array)
   n = array.length
   loop do
+    # swapped will be set to true if any two elements are in the wrong order
     swapped = false
 
     (n-1).times do |i|
+      # compare the two elements and swap them if array[i] > array[i+1]
       if array[i] > array[i+1]
+        # swap the elements
         array[i], array[i+1] = array[i+1], array[i]
+        # set swapped to true
         swapped = true
       end
     end
